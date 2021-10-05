@@ -7,10 +7,10 @@ import java.util.List;
 public interface UserActivity {
     static List<Action> listOfActions = null;
 
-    default ActionStatus executeAction(){
+    public ActionStatus executeAction();/*{
         for (Action action:listOfActions) {
             action.execute();
         }
         return ActionStatus.SUCCESS;
-    }
+    }*/
 }
