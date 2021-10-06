@@ -7,11 +7,13 @@ import main.com.ruleengine.interfaces.base.UserActivity;
 
 import java.util.List;
 
+import static main.com.ruleengine.helper.UserActivityType.BOOK;
+
 public class Book implements UserActivity {
 
     @Override
     public String getActivityName() {
-        return "Book";
+        return BOOK.name();
     }
 
     @Override

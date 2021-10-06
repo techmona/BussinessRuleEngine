@@ -14,6 +14,11 @@ public class MembershipOrUpgradeTest {
 
     @Test
     void executeSendEmail() {
+
         assertEquals(ActionStatus.SUCCESS, membershipOrUpgrade.doSend());
+    }
+    @Test
+    void testExecute(){
+        assertEquals(ActionStatus.SUCCESS, membershipOrUpgrade.execute());
     }
 }

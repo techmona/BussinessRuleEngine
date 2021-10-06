@@ -7,6 +7,12 @@ public class MembershipOrUpgrade implements EmailService {
 
     @Override
     public ActionStatus doSend() {
-        return null;
+        //code to send email
+        return ActionStatus.SUCCESS;
+    }
+
+    @Override
+    public ActionStatus execute() {
+        return ActionStatus.SUCCESS;
     }
 }

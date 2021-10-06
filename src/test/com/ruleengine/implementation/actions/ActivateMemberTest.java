@@ -14,6 +14,12 @@ public class ActivateMemberTest {
 
     @Test
     void executeActivateMember() {
+
         assertEquals(ActionStatus.SUCCESS, activateMember.activate());
+    }
+
+    @Test
+    void testExecute(){
+        assertEquals(ActionStatus.SUCCESS, activateMember.execute());
     }
 }

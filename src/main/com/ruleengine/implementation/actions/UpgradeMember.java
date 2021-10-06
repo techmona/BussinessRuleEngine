@@ -9,4 +9,9 @@ public class UpgradeMember implements UpgradeMembership{
     public ActionStatus upgrade() {
         return null;
     }
+
+    @Override
+    public ActionStatus execute() {
+        return null;
+    }
 }

@@ -1,12 +1,12 @@
 package main.com.ruleengine.implementation.actions;
 
 import main.com.ruleengine.helper.ActionStatus;
-import main.com.ruleengine.interfaces.GenerateSlip;
+import main.com.ruleengine.interfaces.VideoLearningSki;
 
-public class GenerateDuplicatePaymentSlip implements GenerateSlip {
+public class AddFirstAidVideo implements VideoLearningSki{
     @Override
-    public ActionStatus generateSlip() {
-        //write code to generate duplicate slip
+    public ActionStatus addFirstAidVideo() {
+        //Write code to add First aid video
         return ActionStatus.SUCCESS;
     }
 

@@ -15,4 +15,10 @@ public class UpgradeMemberTest {
     void executeUpgrade() {
         assertEquals(ActionStatus.SUCCESS, upgradeMember.upgrade());
     }
+
+
+    @Test
+    void testExecute(){
+        assertEquals(ActionStatus.SUCCESS, upgradeMember.execute());
+    }
 }

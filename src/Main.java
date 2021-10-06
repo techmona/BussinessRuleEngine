@@ -1,6 +1,10 @@
+import main.com.ruleengine.config.UserActivityActionMapping;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        //Register mappings on loading the application
+        UserActivityActionMapping userActivityActionMapping = new UserActivityActionMapping();
+        userActivityActionMapping.register();
     }
 }

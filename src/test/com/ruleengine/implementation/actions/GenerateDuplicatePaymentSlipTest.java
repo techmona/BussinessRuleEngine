@@ -15,4 +15,10 @@ public class GenerateDuplicatePaymentSlipTest {
     void executeduplicatePaymentSlip() {
         assertEquals(ActionStatus.SUCCESS, generateDuplicatePaymentSlip.generateSlip());
     }
+
+    @Test
+    void testExecute(){
+        assertEquals(ActionStatus.SUCCESS, generateDuplicatePaymentSlip.execute());
+    }
+
 }

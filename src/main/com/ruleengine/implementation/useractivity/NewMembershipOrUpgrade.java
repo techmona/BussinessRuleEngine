@@ -2,6 +2,7 @@ package main.com.ruleengine.implementation.useractivity;
 
 import main.com.ruleengine.helper.ActionStatus;
 import main.com.ruleengine.helper.UserActivityRepositoryMapping;
+import main.com.ruleengine.helper.UserActivityType;
 import main.com.ruleengine.interfaces.base.Action;
 import main.com.ruleengine.interfaces.base.UserActivity;
 
@@ -11,7 +12,7 @@ public class NewMembershipOrUpgrade implements UserActivity {
 
     @Override
     public String getActivityName() {
-        return "NewMembershipOrUpgrade";
+        return UserActivityType.NEWMEMBERSHIPORUPGRADE.name();
     }
 
     @Override

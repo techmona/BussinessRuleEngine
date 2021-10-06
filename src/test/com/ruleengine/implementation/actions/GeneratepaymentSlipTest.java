@@ -13,7 +13,13 @@ public class GeneratepaymentSlipTest {
     GeneratePaymentSlip generatepaymentSlip = new  GeneratePaymentSlip();
 
     @Test
-    void executePaymentSlip() {
+    void executePaymentSlip()
+    {
         assertEquals(ActionStatus.SUCCESS, generatepaymentSlip.generateSlip());
+    }
+
+    @Test
+    void testExecute(){
+        assertEquals(ActionStatus.SUCCESS, generatepaymentSlip.execute());
     }
 }

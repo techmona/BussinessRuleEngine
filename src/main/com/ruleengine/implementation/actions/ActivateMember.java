@@ -6,11 +6,12 @@ import main.com.ruleengine.interfaces.ActivateMembership;
 public class ActivateMember implements ActivateMembership {
     @Override
     public ActionStatus activate() {
-        return null;
+        //write code to activate membership
+        return ActionStatus.SUCCESS;
     }
 
     @Override
     public ActionStatus execute() {
-        return null;
+        return ActionStatus.SUCCESS;
     }
 }
