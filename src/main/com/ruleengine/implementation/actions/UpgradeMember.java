@@ -7,11 +7,12 @@ public class UpgradeMember implements UpgradeMembership{
 
     @Override
     public ActionStatus upgrade() {
-        return null;
+        //write code to upgrade membership
+        return ActionStatus.SUCCESS;
     }
 
     @Override
     public ActionStatus execute() {
-        return null;
+        return ActionStatus.SUCCESS;
     }
 }

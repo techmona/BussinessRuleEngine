@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static main.com.ruleengine.config.UserActivityActionMapping.logger;
+
 public class UserActivityRepositoryMapping {
     static List<ActionMapping> actionMappings = new ArrayList<>();
 
@@ -21,6 +23,7 @@ public class UserActivityRepositoryMapping {
         for (ActionMapping obj : mapping) {
             actionList.add(obj.actionName);
         }
+        logger.info("returned all the actions for the userActivityType ");
         return actionList;
     }
 

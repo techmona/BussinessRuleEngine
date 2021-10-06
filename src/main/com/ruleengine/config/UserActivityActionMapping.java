@@ -7,8 +7,11 @@ import main.com.ruleengine.model.ActionMapping;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class UserActivityActionMapping {
+
+    public static Logger logger = Logger.getLogger(UserActivityActionMapping.class.getName());
     public void register(){
         List<ActionMapping> actionMappings = new ArrayList<>();
         actionMappings.add(new ActionMapping(){{userActivityName  = UserActivityType.BOOK.name(); actionName = new GenerateDuplicatePaymentSlip();}});
@@ -17,6 +20,7 @@ public class UserActivityActionMapping {
         actionMappings.add(new ActionMapping(){{userActivityName  =UserActivityType.PHYSICALPRODUCT.name(); actionName = new GeneratePaymentSlip();}});
         actionMappings.add(new ActionMapping(){{userActivityName  =UserActivityType.SKILEARNING.name(); actionName = new AddFirstAidVideo();}});
         actionMappings.add(new ActionMapping(){{userActivityName  =UserActivityType.UPGRADEMEMBERSHIP.name(); actionName = new UpgradeMember();}});
+        logger.info("Added all  mapping for userActivityType and Action");
 
         for(ActionMapping mapping : actionMappings){
             UserActivityRepositoryMapping.registerMapping(mapping);

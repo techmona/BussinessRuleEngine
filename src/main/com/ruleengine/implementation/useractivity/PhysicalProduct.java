@@ -8,6 +8,8 @@ import main.com.ruleengine.interfaces.base.UserActivity;
 
 import java.util.List;
 
+import static main.com.ruleengine.config.UserActivityActionMapping.logger;
+
 public class PhysicalProduct implements UserActivity {
 
 
@@ -20,13 +22,17 @@ public class PhysicalProduct implements UserActivity {
     public ActionStatus executeAction() {
 
         List<ActionStatus> actionStatusList = null;
-        List<Action> actionList = UserActivityRepositoryMapping.getActions(getActivityName());
-        for (Action action : actionList) {
-            actionStatusList.add(action.execute());
+        try {
+            List<Action> actionList = UserActivityRepositoryMapping.getActions(getActivityName());
+            for (Action action : actionList) {
+                actionStatusList.add(action.execute());
+            }
+            if (actionStatusList.contains(ActionStatus.FAILURE))
+                return ActionStatus.FAILURE;
+        }catch(Exception e){
+            logger.info("Failed while getting the action for UserActivityType");
+            e.printStackTrace();
         }
-        if (actionStatusList.contains(ActionStatus.FAILURE))
-            return ActionStatus.FAILURE;
-
         return ActionStatus.SUCCESS;
     }
 }

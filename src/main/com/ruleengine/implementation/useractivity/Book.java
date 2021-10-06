@@ -7,6 +7,7 @@ import main.com.ruleengine.interfaces.base.UserActivity;
 
 import java.util.List;
 
+import static main.com.ruleengine.config.UserActivityActionMapping.logger;
 import static main.com.ruleengine.helper.UserActivityType.BOOK;
 
 public class Book implements UserActivity {
@@ -19,13 +20,17 @@ public class Book implements UserActivity {
     @Override
     public ActionStatus executeAction() {
         List<ActionStatus> actionStatusList = null;
-         List<Action> actionList = UserActivityRepositoryMapping.getActions(getActivityName());
-         for(Action action : actionList){
-           actionStatusList.add(action.execute());
-         }
-        if(actionStatusList.contains(ActionStatus.FAILURE))
-            return ActionStatus.FAILURE;
-
+        try {
+            List<Action> actionList = UserActivityRepositoryMapping.getActions(getActivityName());
+            for (Action action : actionList) {
+                actionStatusList.add(action.execute());
+            }
+            if (actionStatusList.contains(ActionStatus.FAILURE))
+                return ActionStatus.FAILURE;
+        } catch (Exception e) {
+            logger.info("Failed while getting teh action for UserActivityType");
+            e.printStackTrace();
+        }
         return ActionStatus.SUCCESS;
     }
 }
