@@ -1,4 +1,4 @@
-package main.com.ruleengine.baseInterfaces;
+package main.com.ruleengine.interfaces.base;
 
 import main.com.ruleengine.helper.ActionStatus;
 

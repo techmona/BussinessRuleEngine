@@ -1,4 +1,4 @@
-package main.com.ruleengine.baseInterfaces;
+package main.com.ruleengine.interfaces.base;
 
 import main.com.ruleengine.helper.ActionStatus;
 
@@ -7,10 +7,8 @@ import java.util.List;
 public interface UserActivity {
     static List<Action> listOfActions = null;
 
-    public ActionStatus executeAction();/*{
-        for (Action action:listOfActions) {
-            action.execute();
-        }
-        return ActionStatus.SUCCESS;
-    }*/
+    public String getActivityName();
+
+    public ActionStatus executeAction();
+
 }

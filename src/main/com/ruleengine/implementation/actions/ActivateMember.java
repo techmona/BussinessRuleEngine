@@ -8,4 +8,9 @@ public class ActivateMember implements ActivateMembership {
     public ActionStatus activate() {
         return null;
     }
+
+    @Override
+    public ActionStatus execute() {
+        return null;
+    }
 }
