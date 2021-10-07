@@ -13,6 +13,7 @@ public class UpgradeMember implements UpgradeMembership{
 
     @Override
     public ActionStatus execute() {
+        upgrade();
         return ActionStatus.SUCCESS;
     }
 }

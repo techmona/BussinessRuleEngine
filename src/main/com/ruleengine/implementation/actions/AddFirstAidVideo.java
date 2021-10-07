@@ -12,6 +12,7 @@ public class AddFirstAidVideo implements VideoLearningSki{
 
     @Override
     public ActionStatus execute() {
+        addFirstAidVideo();
         return ActionStatus.SUCCESS;
     }
 }

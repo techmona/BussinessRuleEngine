@@ -12,6 +12,7 @@ public class ActivateMember implements ActivateMembership {
 
     @Override
     public ActionStatus execute() {
+        activate();
         return ActionStatus.SUCCESS;
     }
 }

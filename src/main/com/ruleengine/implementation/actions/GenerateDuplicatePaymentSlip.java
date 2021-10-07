@@ -12,6 +12,7 @@ public class GenerateDuplicatePaymentSlip implements GenerateSlip {
 
     @Override
     public ActionStatus execute() {
+        generateSlip();
         return ActionStatus.SUCCESS;
     }
 }

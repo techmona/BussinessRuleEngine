@@ -13,6 +13,7 @@ public class MembershipOrUpgrade implements EmailService {
 
     @Override
     public ActionStatus execute() {
+        doSend();
         return ActionStatus.SUCCESS;
     }
 }
